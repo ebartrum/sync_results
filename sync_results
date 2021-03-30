@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -zarv --prune-empty-dirs --include-from=$1/.sync_conf/include.txt --exclude-from=$1/.sync_conf/exclude.txt $(cat $1/.sync_conf/target.txt) $1 
